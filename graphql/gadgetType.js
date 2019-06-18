@@ -1,6 +1,6 @@
 const graphql = require('graphql');
 
-const { GraphQLObjectType, GraphQLString } = graphql;
+const { GraphQLObjectType, GraphQLString, GraphQLInt } = graphql;
 
 const GadgetType = new GraphQLObjectType({
     name: 'Gadget',
@@ -9,7 +9,7 @@ const GadgetType = new GraphQLObjectType({
         name: { type: GraphQLString },
         release_date: { type: GraphQLString },
         by_company: { type: GraphQLString },
-        price: { type: GraphQLString }
+        price: { type: GraphQLInt }
     })
 });
 
